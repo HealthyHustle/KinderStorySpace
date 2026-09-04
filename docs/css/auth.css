@@ -1,0 +1,324 @@
+/* ==========================================================================
+   KINDER STORY SPACE - AUTHENTICATION (LOGIN & REGISTER)
+   Split-screen Layout with Playful Educational Aesthetics
+   ========================================================================== */
+
+.auth-viewport {
+  min-height: 100vh;
+  display: flex;
+  background: var(--color-white);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Split-screen container */
+.auth-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Left Side - Hero Illustration & Warm Branding */
+.auth-left {
+  background: var(--color-bg-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-left-content {
+  position: relative;
+  z-index: 5;
+  max-width: 520px;
+  text-align: center;
+}
+
+.auth-brand-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--color-white);
+  padding: 8px 20px;
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-sm);
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 24px;
+}
+
+.auth-heading {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: var(--color-dark-navy);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.auth-subheading {
+  font-size: 1.12rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+/* Illustration Container with Organic Blob */
+.auth-illustration-stage {
+  position: relative;
+  width: 380px;
+  height: 340px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-blob-yellow {
+  position: absolute;
+  width: 340px;
+  height: 300px;
+  background: #FFEAA0;
+  border-radius: 56% 44% 68% 32% / 42% 58% 42% 58%;
+  z-index: 1;
+  animation: organicWobble 12s infinite alternate ease-in-out;
+}
+
+.auth-blob-blue {
+  position: absolute;
+  width: 380px;
+  height: 330px;
+  background: #D5ECFF;
+  border-radius: 42% 58% 36% 64% / 58% 42% 58% 42%;
+  z-index: 0;
+  animation: organicWobble 15s infinite alternate-reverse ease-in-out;
+}
+
+.auth-hero-img {
+  position: relative;
+  z-index: 3;
+  width: 320px;
+  height: 320px;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 36px;
+  box-shadow: 0 20px 44px rgba(11, 36, 71, 0.18);
+  border: 4px solid #FFFFFF;
+}
+
+/* Right Side - Login Card */
+.auth-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background: var(--color-white);
+  position: relative;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 440px;
+  background: var(--color-white);
+  padding: 44px 40px;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 16px 40px rgba(11, 36, 71, 0.08);
+  border: 1px solid var(--color-border);
+}
+
+.auth-card-header {
+  margin-bottom: 28px;
+  text-align: left;
+}
+
+.auth-card-title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--color-dark-navy);
+  margin-bottom: 8px;
+}
+
+.auth-card-desc {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--color-dark-navy);
+  margin-bottom: 8px;
+}
+
+.form-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.form-icon {
+  position: absolute;
+  left: 18px;
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  pointer-events: none;
+}
+
+.form-input {
+  width: 100%;
+  padding: 14px 18px 14px 46px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--color-border);
+  background: var(--color-soft-gray);
+  font-size: 0.95rem;
+  color: var(--color-dark-navy);
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+.form-input:focus {
+  background: var(--color-white);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px rgba(22, 135, 248, 0.12);
+}
+
+.btn-toggle-password {
+  position: absolute;
+  right: 18px;
+  background: transparent;
+  border: none;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-toggle-password:hover {
+  color: var(--color-primary);
+}
+
+/* Form Options (Remember me & Forgot pass) */
+.form-options-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  font-size: 0.88rem;
+}
+
+.remember-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-text-muted);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.remember-checkbox {
+  width: 17px;
+  height: 17px;
+  accent-color: var(--color-primary);
+  cursor: pointer;
+}
+
+.forgot-link {
+  color: var(--color-primary);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+.btn-auth-submit {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.05rem;
+  margin-bottom: 20px;
+}
+
+.auth-switch-text {
+  text-align: center;
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+}
+
+.auth-switch-link {
+  color: var(--color-primary);
+  font-weight: 800;
+  cursor: pointer;
+  text-decoration: none;
+  margin-left: 4px;
+}
+
+.auth-switch-link:hover {
+  text-decoration: underline;
+}
+
+/* Quick Demo Login Badges */
+.demo-accounts-box {
+  margin-top: 24px;
+  padding: 14px;
+  background: var(--color-bg-light);
+  border-radius: var(--radius-md);
+  border: 1px dashed rgba(22, 135, 248, 0.3);
+  font-size: 0.8rem;
+}
+
+.demo-accounts-title {
+  font-weight: 800;
+  color: var(--color-dark-navy);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.demo-pill-btn {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  font-weight: 700;
+  color: var(--color-primary);
+  cursor: pointer;
+  margin-right: 6px;
+  margin-top: 4px;
+  transition: all var(--transition-fast);
+}
+
+.demo-pill-btn:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .auth-grid {
+    grid-template-columns: 1fr;
+  }
+  .auth-left {
+    display: none; /* Mobile view prioritizes login card */
+  }
+  .auth-right {
+    padding: 24px;
+  }
+  .auth-card {
+    padding: 32px 24px;
+    box-shadow: var(--shadow-md);
+  }
+}

@@ -24,16 +24,32 @@
 
 ---
 
-## 🚀 Cara Menjalankan Secara Lokal (Localhost)
+## 🌐 Cara Akses Online (Tanpa Localhost) & Hosting
+
+### Pilihan 1: Hosting Langsung di GitHub Pages (100% Gratis & Permanen)
+Aplikasi ini sudah dipaksa dan dioptimalkan agar berjalan **100% statis di GitHub Pages** tanpa perlu server backend Node.js!
+- Ikuti langkah 1 menit di **[PANDUAN_GITHUB_PAGES.md](PANDUAN_GITHUB_PAGES.md)** untuk mengaktifkan URL:
+  ```
+  https://healthyhustle.github.io/KinderStorySpace/
+  ```
+
+### Pilihan 2: Cloud Backend Hosting (Render / Vercel)
+Jika ingin menjalankan backend Node.js Express lengkap dengan server-side PDF generator:
+- **Render.com**: Ikuti petunjuk lengkap di [PANDUAN_DEPLOY_ONLINE.md](PANDUAN_DEPLOY_ONLINE.md) (`render.yaml`).
+- **Vercel**: Deploy instan dengan konfigurasi `vercel.json`.
+
+### Pilihan 3: Buka Langsung Sekali Klik di Komputer (Offline Launcher)
+Cukup **klik 2x file `Buka_KinderStorySpace.bat`** di folder utama. Server akan menyala di latar belakang dan browser akan langsung terbuka otomatis tanpa perlu membuka CMD/terminal.
+
+---
+
+## 🚀 Cara Menjalankan Manual (Terminal / CMD)
 
 ### 1. Prasyarat
 Pastikan Anda telah menginstal [Node.js](https://nodejs.org/) (versi 16 ke atas direkomendasikan).
 
 ### 2. Instalasi Dependensi
-Clone repository dan pasang paket yang diperlukan:
 ```bash
-git clone https://github.com/HealthyHustle/KinderStorySpace.git
-cd KinderStorySpace
 npm install
 ```
 
@@ -41,10 +57,7 @@ npm install
 ```bash
 npm start
 ```
-Buka peramban (browser) dan akses:
-```
-http://localhost:3000
-```
+Buka peramban (browser) dan akses: `http://localhost:3000`
 
 ---
 
