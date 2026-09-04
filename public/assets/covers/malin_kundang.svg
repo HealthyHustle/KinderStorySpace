@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1687F8" />
+      <stop offset="100%" stop-color="#0B4D9C" />
+    </linearGradient>
+    <radialGradient id="glowGrad" cx="50%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </radialGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0B2447" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="800" rx="36" fill="url(#bgGrad)" />
+  <rect width="600" height="800" rx="36" fill="url(#glowGrad)" />
+
+  <!-- Playful Background Blobs & Stars -->
+  <circle cx="90" cy="110" r="18" fill="#FFC928" opacity="0.8"/>
+  <circle cx="520" cy="180" r="12" fill="#FFFFFF" opacity="0.6"/>
+  <circle cx="500" cy="680" r="28" fill="#FFC928" opacity="0.5"/>
+  <circle cx="70" cy="700" r="22" fill="#FFFFFF" opacity="0.4"/>
+  
+  <!-- Sparkles -->
+  <path d="M510,90 L514,105 L529,109 L514,113 L510,128 L506,113 L491,109 L506,105 Z" fill="#FFC928" />
+  <path d="M120,240 L122,250 L132,252 L122,254 L120,264 L118,254 L108,252 L118,250 Z" fill="#FFFFFF" opacity="0.8" />
+  
+  <!-- Clouds at bottom -->
+  <path d="M-20,740 Q60,680 140,730 Q220,670 320,720 Q420,680 500,730 Q580,690 620,750 L620,800 L-20,800 Z" fill="#FFFFFF" opacity="0.25"/>
+  <path d="M-20,760 Q90,720 200,750 Q310,710 430,750 Q520,720 620,770 L620,800 L-20,800 Z" fill="#FFFFFF" opacity="0.4"/>
+
+  <!-- Badge / Tag -->
+  <g transform="translate(48, 52)">
+    <rect width="160" height="38" rx="19" fill="#FFFFFF" opacity="0.95" filter="url(#shadow)"/>
+    <text x="80" y="24" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="13" font-weight="700" fill="#0B2447" text-anchor="middle" letter-spacing="1">CERITA RAKYAT</text>
+  </g>
+
+  <!-- Central Graphic Container -->
+  <g transform="translate(300, 360)" filter="url(#shadow)">
+    <circle cx="0" cy="0" r="160" fill="#FFFFFF" opacity="0.95"/>
+    <circle cx="0" cy="0" r="142" fill="#1687F8" opacity="0.12"/>
+    
+      <!-- Big Ship at Sea -->
+      <path d="M-90,30 Q0,55 90,30 L70,80 Q0,95 -70,80 Z" fill="#D97706"/>
+      <path d="M-80,30 L80,30 L65,55 L-65,55 Z" fill="#F59E0B"/>
+      <!-- Mast & Sails -->
+      <line x1="0" y1="-100" x2="0" y2="30" stroke="#78350F" stroke-width="8" stroke-linecap="round"/>
+      <path d="M5,-90 Q70,-45 5,10 Z" fill="#FFFFFF" filter="url(#shadow)"/>
+      <path d="M-5,-70 Q-55,-35 -5,15 Z" fill="#EEF2F6"/>
+      <!-- Flag -->
+      <polygon points="0,-100 35,-85 0,-70" fill="#EF4444"/>
+      <!-- Waves -->
+      <path d="M-130,85 Q-70,65 -10,85 Q50,105 110,85 Q140,75 160,85" stroke="#38BDF8" stroke-width="8" fill="none" stroke-linecap="round"/>
+    
+  </g>
+
+  <!-- Title & Subtitle Card -->
+  <g transform="translate(50, 560)">
+    <rect width="500" height="175" rx="28" fill="#FFFFFF" filter="url(#shadow)"/>
+    
+    <!-- Title -->
+    <text x="250" y="60" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="30" font-weight="800" fill="#0B2447" text-anchor="middle">
+      Malin Kundang
+    </text>
+    
+    <!-- Decorative Line -->
+    <path d="M190,78 Q250,88 310,78" stroke="#FFC928" stroke-width="5" stroke-linecap="round" fill="none"/>
+
+    <!-- Subtitle -->
+    <text x="250" y="115" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="16" font-weight="600" fill="#64748B" text-anchor="middle">
+      Cerita Rakyat Sumatera Barat
+    </text>
+    
+    <text x="250" y="145" font-family="'Caveat', cursive, sans-serif" font-size="20" font-weight="700" fill="#1687F8" text-anchor="middle">
+      Kinder Story Space • Edisi PGPAUD
+    </text>
+  </g>
+</svg>

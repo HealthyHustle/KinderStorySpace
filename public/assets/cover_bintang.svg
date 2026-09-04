@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="nightGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2D1B4E" />
+      <stop offset="50%" stop-color="#4C2B75" />
+      <stop offset="100%" stop-color="#7B4D9B" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Night background -->
+  <rect width="400" height="500" rx="20" fill="url(#nightGrad)" />
+  
+  <!-- Sparkling Background Stars -->
+  <g fill="#FFF" opacity="0.6">
+    <!-- Star 1 -->
+    <path d="M 60 70 L 63 75 L 68 76 L 63 80 L 64 85 L 60 81 L 56 85 L 57 80 L 52 76 L 57 75 Z" />
+    <!-- Star 2 -->
+    <path d="M 320 120 L 322 124 L 327 125 L 322 129 L 323 134 L 320 131 L 317 134 L 318 129 L 313 125 L 318 124 Z" />
+    <!-- Star 3 -->
+    <path d="M 120 380 L 122 383 L 126 384 L 122 387 L 123 391 L 120 389 L 117 391 L 118 387 L 114 384 L 118 383 Z" />
+    <!-- Star 4 -->
+    <path d="M 280 400 L 282 403 L 286 404 L 282 407 L 283 411 L 280 409 L 277 411 L 278 407 L 274 404 L 278 403 Z" />
+  </g>
+  <g fill="#FFF" opacity="0.3">
+    <circle cx="90" cy="180" r="2" />
+    <circle cx="150" cy="100" r="3" />
+    <circle cx="280" cy="220" r="2" />
+    <circle cx="340" cy="320" r="3" />
+    <circle cx="50" cy="310" r="2" />
+    <circle cx="200" cy="450" r="1.5" />
+  </g>
+  
+  <!-- Sleepy Crescent Moon -->
+  <g transform="translate(280, 50)" filter="url(#glow)">
+    <!-- Moon shape -->
+    <path d="M 40 10 A 35 35 0 1 0 75 70 A 30 30 0 1 1 40 10 Z" fill="#FDE047" />
+    <!-- Sleeping eye -->
+    <path d="M 46 38 Q 50 42, 54 38" fill="none" stroke="#6B21A8" stroke-width="2.5" stroke-linecap="round" />
+    <line x1="44" y1="36" x2="42" y2="39" stroke="#6B21A8" stroke-width="1.5" />
+    <line x1="56" y1="36" x2="58" y2="39" stroke="#6B21A8" stroke-width="1.5" />
+    
+    <!-- Rosy Cheek -->
+    <circle cx="48" cy="45" r="3.5" fill="#FF8BA7" opacity="0.7" />
+    
+    <!-- Sleep cap -->
+    <path d="M 42 12 Q 35 -5, 20 -2 Q 10 5, 20 18 L 36 21 Z" fill="#A7F3D0" />
+    <circle cx="16" cy="-2" r="5" fill="#FFF" />
+  </g>
+  
+  <!-- Dream Clouds (Floating) -->
+  <g fill="#C084FC" opacity="0.5">
+    <path d="M 30 420 Q 90 390, 160 420 Q 230 400, 280 430 Q 330 410, 380 440 L 400 500 L 0 500 Z" />
+  </g>
+  <g fill="#E9D5FF" opacity="0.6">
+    <path d="M -10 440 Q 50 420, 120 445 Q 190 420, 260 450 Q 330 435, 410 460 L 410 500 L -10 500 Z" />
+  </g>
+  
+  <!-- Giant Smiling Star Mascot (Glowing) -->
+  <g transform="translate(200, 260)" filter="url(#glow)">
+    <!-- Star Points (Draw using polygon or path) -->
+    <!-- Center is 0,0. Radius Outer 90, Inner 38 -->
+    <polygon points="
+      0,-90 
+      25,-30 
+      85,-25 
+      38,15 
+      55,75 
+      0,40 
+      -55,75 
+      -38,15 
+      -85,-25 
+      -25,-30" 
+      fill="#FBBF24" stroke="#FDE047" stroke-width="4" />
+    
+    <!-- Star Face -->
+    <!-- Eyes -->
+    <g fill="#3730A3">
+      <!-- Left Eye (wink/happy curve) -->
+      <path d="M -30 -5 Q -20 -15, -10 -5" fill="none" stroke="#3730A3" stroke-width="4.5" stroke-linecap="round" />
+      <!-- Right Eye (happy curve) -->
+      <path d="M 10 -5 Q 20 -15, 30 -5" fill="none" stroke="#3730A3" stroke-width="4.5" stroke-linecap="round" />
+    </g>
+    <!-- Rosy Cheek Blushes -->
+    <circle cx="-32" cy="5" r="9" fill="#F472B6" opacity="0.75" />
+    <circle cx="32" cy="5" r="9" fill="#F472B6" opacity="0.75" />
+    
+    <!-- Smiling Mouth -->
+    <path d="M -8 2 Q 0 12, 8 2" fill="none" stroke="#3730A3" stroke-width="4.5" stroke-linecap="round" />
+    <!-- Cute open smile tongue -->
+    <path d="M -6 6 A 6 6 0 0 0 6 6 Z" fill="#F43F5E" />
+  </g>
+  
+  <!-- Hanging mini star -->
+  <line x1="200" y1="0" x2="200" y2="120" stroke="#FFF" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.5" />
+  <g transform="translate(200,120) scale(0.6)">
+    <polygon points="0,-15 4,-5 14,-3 6,3 9,13 0,8 -9,13 -6,3 -14,-3 -4,-5" fill="#FFF" filter="url(#glow)" />
+  </g>
+</svg>

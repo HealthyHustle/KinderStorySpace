@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#CEF3F9" />
+      <stop offset="60%" stop-color="#EBF9FC" />
+      <stop offset="100%" stop-color="#FFF8EC" />
+    </linearGradient>
+    <linearGradient id="rainbowGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFADAD" />
+      <stop offset="25%" stop-color="#FFD6A5" />
+      <stop offset="50%" stop-color="#FDFFB6" />
+      <stop offset="75%" stop-color="#CAFFBF" />
+      <stop offset="100%" stop-color="#9BF6FF" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Sky background -->
+  <rect width="400" height="500" rx="20" fill="url(#skyGrad)" />
+  
+  <!-- Rainbow -->
+  <path d="M-20 180 C 100 20, 300 20, 420 180" fill="none" stroke="url(#rainbowGrad)" stroke-width="20" opacity="0.8" />
+  
+  <!-- Sun -->
+  <circle cx="330" cy="80" r="35" fill="#FDE047" />
+  <circle cx="330" cy="80" r="28" fill="#FACC15" />
+  <!-- Sun face -->
+  <circle cx="320" cy="75" r="3" fill="#3F3F46" />
+  <circle cx="340" cy="75" r="3" fill="#3F3F46" />
+  <path d="M 323 85 Q 330 92, 337 85" fill="none" stroke="#3F3F46" stroke-width="3" stroke-linecap="round" />
+  <circle cx="315" cy="80" r="4" fill="#F472B6" opacity="0.6" />
+  <circle cx="345" cy="80" r="4" fill="#F472B6" opacity="0.6" />
+  
+  <!-- Floating clouds -->
+  <g opacity="0.85">
+    <path d="M 30 130 A 20 20 0 0 1 70 130 A 25 25 0 0 1 110 130 A 20 20 0 0 1 130 140 A 15 15 0 0 1 130 150 L 30 150 Z" fill="#FFFFFF" />
+    <path d="M 270 160 A 15 15 0 0 1 300 160 A 20 20 0 0 1 330 160 A 15 15 0 0 1 350 170 L 270 170 Z" fill="#FFFFFF" />
+  </g>
+  
+  <!-- School Building / Gate -->
+  <g transform="translate(0, 10)">
+    <!-- Base Hills/Grass -->
+    <path d="M-20 420 Q 120 370, 220 410 T 420 400 L 420 520 L -20 520 Z" fill="#A7F3D0" />
+    <path d="M-20 450 Q 80 430, 200 460 T 420 430 L 420 520 L -20 520 Z" fill="#5EEAD4" />
+    
+    <!-- Trees -->
+    <g transform="translate(40, 310)">
+      <rect x="12" y="40" width="8" height="30" rx="3" fill="#78350F" />
+      <circle cx="16" cy="30" r="25" fill="#34D399" />
+      <circle cx="10" cy="20" r="18" fill="#10B981" />
+    </g>
+    <g transform="translate(320, 320)">
+      <rect x="12" y="40" width="8" height="30" rx="3" fill="#78350F" />
+      <circle cx="16" cy="35" r="22" fill="#34D399" />
+    </g>
+    
+    <!-- School House -->
+    <g transform="translate(100, 250)">
+      <rect x="10" y="70" width="180" height="90" rx="8" fill="#FF8BA7" />
+      <!-- Roof -->
+      <polygon points="0,70 100,10 200,70" fill="#F43F5E" />
+      <!-- Door -->
+      <rect x="80" y="110" width="40" height="50" rx="4" fill="#FEE2E2" />
+      <circle cx="112" cy="135" r="4" fill="#F59E0B" />
+      <!-- Windows -->
+      <rect x="30" y="90" width="30" height="30" rx="4" fill="#E0F2FE" />
+      <line x1="45" y1="90" x2="45" y2="120" stroke="#38BDF8" stroke-width="2" />
+      <line x1="30" y1="105" x2="60" y2="105" stroke="#38BDF8" stroke-width="2" />
+      
+      <rect x="140" y="90" width="30" height="30" rx="4" fill="#E0F2FE" />
+      <line x1="155" y1="90" x2="155" y2="120" stroke="#38BDF8" stroke-width="2" />
+      <line x1="140" y1="105" x2="170" y2="105" stroke="#38BDF8" stroke-width="2" />
+      
+      <!-- Clock on roof -->
+      <circle cx="100" cy="45" r="18" fill="#FFFFFF" stroke="#F43F5E" stroke-width="3" />
+      <line x1="100" y1="45" x2="100" y2="35" stroke="#3F3F46" stroke-width="2" stroke-linecap="round" />
+      <line x1="100" y1="45" x2="108" y2="45" stroke="#3F3F46" stroke-width="2" stroke-linecap="round" />
+    </g>
+    
+    <!-- Happy Pencil Mascot on the side -->
+    <g transform="translate(45, 360) scale(0.7)">
+      <!-- Pencil body -->
+      <path d="M 10 30 L 30 30 L 30 90 L 10 90 Z" fill="#FBBF24" />
+      <path d="M 10 90 L 30 90 L 20 110 Z" fill="#FDBA74" />
+      <!-- Lead tip -->
+      <path d="M 17 104 L 23 104 L 20 110 Z" fill="#4B5563" />
+      <!-- Eraser -->
+      <path d="M 10 30 C 10 20, 30 20, 30 30 Z" fill="#FDA4AF" />
+      <!-- Metal band -->
+      <rect x="10" y="27" width="20" height="6" fill="#9CA3AF" />
+      <!-- Face -->
+      <circle cx="16" cy="55" r="2" fill="#000" />
+      <circle cx="24" cy="55" r="2" fill="#000" />
+      <path d="M 17 65 Q 20 70, 23 65" fill="none" stroke="#000" stroke-width="1.5" />
+      <!-- Cheeks -->
+      <circle cx="14" cy="59" r="1.5" fill="#FF8BA7" />
+      <circle cx="26" cy="59" r="1.5" fill="#FF8BA7" />
+      <!-- Tiny limbs -->
+      <path d="M 5 60 Q 0 55, 10 52" fill="none" stroke="#4B5563" stroke-width="2" />
+      <path d="M 35 60 Q 40 55, 30 52" fill="none" stroke="#4B5563" stroke-width="2" />
+    </g>
+  </g>
+</svg>

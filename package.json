@@ -1,0 +1,25 @@
+{
+  "name": "kinder-story-space",
+  "version": "1.0.0",
+  "description": "Platform Digital Buku Cerita Anak dan Modul Pembelajaran PGPAUD",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "node server/server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "pdfkit": "^0.15.2"
+  },
+  "keywords": [
+    "pgpaud",
+    "kinder-story-space",
+    "story-books",
+    "early-childhood-education"
+  ],
+  "author": "Kinder Story Space UPI Cibiru",
+  "license": "ISC"
+}

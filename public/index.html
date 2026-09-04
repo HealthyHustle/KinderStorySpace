@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kinder Story Space - Platform Buku Cerita Anak & Modul PGPAUD</title>
+  <meta name="description" content="Platform digital buku cerita anak interaktif dan modul pembelajaran Pendidikan Guru Pendidikan Anak Usia Dini (PGPAUD). Cerita dwibahasa, reader ramah anak, dan unduh PDF.">
+  <meta name="keywords" content="PGPAUD, Kinder Story Space, Buku Cerita Anak, Dongeng Nusantara, Fabel Edukatif, Modul Pembelajaran PAUD, UPI Cibiru">
+  <meta name="author" content="Kinder Story Space - UPI Kampus Cibiru">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="/assets/logo_kinder_story_space.jpeg">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/auth.css">
+  <link rel="stylesheet" href="/css/reader.css">
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+
+  <!-- App Mount Root -->
+  <div id="app-root">
+    <!-- Rendered dynamically by Router -->
+    <div style="min-height: 100vh; display: flex; align-items: center; justify-content: center; background: #EEF7FF;">
+      <div style="text-align: center;">
+        <img src="/assets/logo_kinder_story_space.jpeg" alt="Kinder Story Space" style="width: 110px; height: 110px; border-radius: 28px; box-shadow: 0 12px 30px rgba(22, 135, 248, 0.2); margin-bottom: 18px; object-fit: cover;">
+        <h2 style="font-family: 'Outfit', sans-serif; color: #0B2447; font-weight: 800;">Kinder Story Space</h2>
+        <p style="color: #64748B; font-size: 0.95rem; margin-top: 6px;">Memuat ruang cerita digital...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Modal Backdrop -->
+  <div id="modal-backdrop" class="modal-backdrop"></div>
+
+  <!-- Core Scripts -->
+  <script src="/js/api.js"></script>
+  <script src="/js/auth.js"></script>
+
+  <!-- Components -->
+  <script src="/js/components/toast.js"></script>
+  <script src="/js/components/modal.js"></script>
+  <script src="/js/components/navbar.js"></script>
+  <script src="/js/components/footer.js"></script>
+
+  <!-- Pages -->
+  <script src="/js/pages/authPage.js"></script>
+  <script src="/js/pages/homePage.js"></script>
+  <script src="/js/pages/bookDetailPage.js"></script>
+  <script src="/js/pages/readerPage.js"></script>
+  <script src="/js/pages/modulesPage.js"></script>
+  <script src="/js/pages/adminCommon.js"></script>
+  <script src="/js/pages/adminDashboardPage.js"></script>
+  <script src="/js/pages/adminBooksPage.js"></script>
+  <script src="/js/pages/adminModulesPage.js"></script>
+  <script src="/js/pages/adminUsersPage.js"></script>
+
+  <!-- Router & App Entry -->
+  <script src="/js/router.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>
