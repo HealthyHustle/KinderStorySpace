@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7DD3FC"/>
+      <stop offset="70%" stop-color="#E0F2FE"/>
+      <stop offset="100%" stop-color="#FEF3C7"/>
+    </linearGradient>
+    <linearGradient id="seaGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#075985"/>
+    </linearGradient>
+    <linearGradient id="woodGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#92400E"/>
+      <stop offset="50%" stop-color="#B45309"/>
+      <stop offset="100%" stop-color="#78350F"/>
+    </linearGradient>
+    <filter id="shadow2" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0B2447" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="800" height="300" fill="url(#skyGrad2)"/>
+
+  <!-- Morning Sun Rising on the Horizon -->
+  <g transform="translate(680, 160)">
+    <circle cx="0" cy="0" r="50" fill="#FDE047" opacity="0.3"/>
+    <circle cx="0" cy="0" r="35" fill="#FBBF24"/>
+    <circle cx="0" cy="0" r="26" fill="#F59E0B"/>
+  </g>
+
+  <!-- Clouds -->
+  <path d="M120,60 Q150,35 180,55 Q210,35 240,55 Q260,45 280,65 L140,65 Z" fill="#FFFFFF" opacity="0.8"/>
+  <path d="M420,80 Q450,55 480,75 Q510,60 535,80 L430,80 Z" fill="#FFFFFF" opacity="0.75"/>
+
+  <!-- Birds Heading toward Open Sea -->
+  <g stroke="#0284C7" stroke-width="2.5" fill="none" stroke-linecap="round">
+    <path d="M540,110 Q548,102 556,110 Q564,102 572,110"/>
+    <path d="M580,95 Q587,88 594,95 Q601,88 608,95"/>
+  </g>
+
+  <!-- Deep Blue Sea -->
+  <rect y="210" width="800" height="150" fill="url(#seaGrad2)"/>
+  <path d="M0,230 Q200,218 400,230 Q600,242 800,230 L800,270 L0,270 Z" fill="#38BDF8" opacity="0.3"/>
+
+  <!-- DOCKED SAILING SHIP AT PIER (Left/Center background) -->
+  <g id="scene2-obj-kapal" transform="translate(160, 150)" filter="url(#shadow2)">
+    <!-- Ship Hull -->
+    <path d="M-110,70 Q0,110 120,70 L100,125 Q0,150 -90,125 Z" fill="#B45309"/>
+    <path d="M-95,70 L105,70 L90,95 L-80,95 Z" fill="#D97706"/>
+    <!-- Portholes -->
+    <circle cx="-40" cy="105" r="5" fill="#FEF08A" stroke="#78350F" stroke-width="2"/>
+    <circle cx="0" cy="105" r="5" fill="#FEF08A" stroke="#78350F" stroke-width="2"/>
+    <circle cx="40" cy="105" r="5" fill="#FEF08A" stroke="#78350F" stroke-width="2"/>
+    <!-- Tall Masts -->
+    <line x1="-30" y1="-80" x2="-30" y2="75" stroke="#451A03" stroke-width="7" stroke-linecap="round"/>
+    <line x1="40" y1="-95" x2="40" y2="75" stroke="#451A03" stroke-width="7" stroke-linecap="round"/>
+    <!-- Large Billowing White Sails -->
+    <path d="M-25,-75 Q40,-35 -25,20 Z" fill="#FFFFFF" opacity="0.95" filter="url(#shadow2)"/>
+    <path d="M45,-90 Q120,-45 45,25 Z" fill="#FFFFFF" opacity="0.95" filter="url(#shadow2)"/>
+    <!-- Colorful Pennant Flags -->
+    <polygon points="-30,-80 -5,-70 -30,-60" fill="#EF4444"/>
+    <polygon points="40,-95 70,-83 40,-71" fill="#3B82F6"/>
+
+    <!-- Ship Anchor Rope -->
+    <path d="M100,105 Q125,140 135,190" stroke="#78350F" stroke-width="4" stroke-dasharray="4,2" fill="none"/>
+
+    <!-- Interactive context tag for Kapal -->
+    <g transform="translate(5, -110)">
+      <rect x="-46" y="-13" width="92" height="26" rx="13" fill="#FFFFFF" stroke="#1687F8" stroke-width="1.5" filter="url(#shadow2)"/>
+      <text x="0" y="5" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800" fill="#0B2447" text-anchor="middle">⛵ KAPAL BERLAYAR</text>
+    </g>
+  </g>
+
+  <!-- WOODEN DOCK / PIER (Dermaga Pelabuhan) -->
+  <g transform="translate(0, 310)">
+    <!-- Wooden Pilings in water -->
+    <rect x="260" y="30" width="16" height="160" fill="#451A03"/>
+    <rect x="360" y="30" width="16" height="160" fill="#451A03"/>
+    <rect x="480" y="30" width="16" height="160" fill="#451A03"/>
+    <rect x="600" y="30" width="16" height="160" fill="#451A03"/>
+    <rect x="720" y="30" width="16" height="160" fill="#451A03"/>
+
+    <!-- Dock Platform Planks -->
+    <polygon points="220,30 800,30 800,75 220,75" fill="url(#woodGrad2)"/>
+    <!-- Plank lines -->
+    <line x1="280" y1="30" x2="280" y2="75" stroke="#451A03" stroke-width="2"/>
+    <line x1="350" y1="30" x2="350" y2="75" stroke="#451A03" stroke-width="2"/>
+    <line x1="430" y1="30" x2="430" y2="75" stroke="#451A03" stroke-width="2"/>
+    <line x1="520" y1="30" x2="520" y2="75" stroke="#451A03" stroke-width="2"/>
+    <line x1="610" y1="30" x2="610" y2="75" stroke="#451A03" stroke-width="2"/>
+    <line x1="700" y1="30" x2="700" y2="75" stroke="#451A03" stroke-width="2"/>
+
+    <!-- Dock Rope Bollard -->
+    <rect x="290" y="10" width="14" height="22" rx="4" fill="#1E293B"/>
+    <circle cx="297" cy="10" r="10" fill="#334155"/>
+    <ellipse cx="297" cy="22" rx="14" ry="5" fill="#B45309" stroke="#78350F" stroke-width="3"/>
+  </g>
+
+  <!-- CHARACTERS ON THE PIER: MALIN & IBU WITH TRAVEL SUPPLIES -->
+  <g transform="translate(480, 220)">
+    <!-- MOTHER (GIVING BEKAL & PRAYER NOTE) -->
+    <g transform="translate(110, 0)">
+      <!-- Batik Long Skirt -->
+      <path d="M-20,70 L20,70 L26,135 L-26,135 Z" fill="#B45309"/>
+      <line x1="-15" y1="92" x2="20" y2="92" stroke="#FDE68A" stroke-width="1.5"/>
+      <line x1="-20" y1="115" x2="22" y2="115" stroke="#FDE68A" stroke-width="1.5"/>
+      <!-- Kebaya Blouse -->
+      <rect x="-22" y="25" width="44" height="50" rx="10" fill="#EA580C"/>
+      <!-- Soft Veil / Kerudung -->
+      <path d="M-20,10 Q0,-4 20,10 L24,50 Q0,56 -24,50 Z" fill="#FDE047"/>
+      <!-- Face -->
+      <circle cx="0" cy="14" r="17" fill="#FCD34D"/>
+      <!-- Loving, Encouraging Expression -->
+      <path d="M-8,12 Q-4,8 0,12" stroke="#451A03" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M2,12 Q6,8 10,12" stroke="#451A03" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M-5,19 Q0,24 6,19" stroke="#451A03" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      <circle cx="-10" cy="18" r="3.5" fill="#FCA5A5" opacity="0.6"/>
+      <circle cx="10" cy="18" r="3.5" fill="#FCA5A5" opacity="0.6"/>
+
+      <!-- Arms extended holding the food bundle (bekal) & scroll (surat pesan) -->
+      <path d="M-20,38 Q-45,45 -65,48" stroke="#EA580C" stroke-width="7" fill="none" stroke-linecap="round"/>
+      <circle cx="-65" cy="48" r="5" fill="#FCD34D"/>
+
+      <!-- THE BEKAL BUNDLE (Kain Pembungkus Bekal Makanan) -->
+      <g transform="translate(-68, 40)" filter="url(#shadow2)">
+        <ellipse cx="0" cy="0" rx="16" ry="13" fill="#FBBF24"/>
+        <path d="M-10,-5 Q0,-15 8,-8 Q0,-3 -10,-5" fill="#F59E0B"/>
+        <!-- Knot on top -->
+        <circle cx="0" cy="-10" r="5" fill="#D97706"/>
+        <!-- Hearts of Love from mother -->
+        <path d="M-3,-22 A4,4 0 0,0 -11,-22 Q-11,-15 -3,-10 Q5,-15 5,-22 A4,4 0 0,0 -3,-22 Z" fill="#EF4444" transform="scale(0.8) translate(0, -5)"/>
+      </g>
+
+      <!-- THE PRAYER SCROLL / SURAT PESAN IBU -->
+      <g transform="translate(-65, 68)" filter="url(#shadow2)">
+        <rect x="-14" y="-8" width="28" height="16" rx="4" fill="#FEF3C7" stroke="#D97706" stroke-width="1.5"/>
+        <line x1="-9" y1="-3" x2="9" y2="-3" stroke="#B45309" stroke-width="1.5"/>
+        <line x1="-9" y1="2" x2="6" y2="2" stroke="#B45309" stroke-width="1.5"/>
+        <!-- Red ribbon seal -->
+        <circle cx="0" cy="0" r="3" fill="#DC2626"/>
+      </g>
+    </g>
+
+    <!-- MALIN (PREPARING WITH TRAVEL BAG & OUTFIT) -->
+    <g transform="translate(-20, 10)">
+      <!-- Long Travel Trousers -->
+      <rect x="-16" y="65" width="15" height="45" rx="5" fill="#0369A1"/>
+      <rect x="1" y="65" width="15" height="45" rx="5" fill="#0369A1"/>
+      <!-- Shoes -->
+      <ellipse cx="-8" cy="115" rx="10" ry="5" fill="#78350F"/>
+      <ellipse cx="9" cy="115" rx="10" ry="5" fill="#78350F"/>
+
+      <!-- Clean Travel Tunic (Pakaian Ganti Rapi) -->
+      <rect x="-22" y="24" width="44" height="46" rx="10" fill="#1687F8"/>
+      <path d="M-22,42 L22,42" stroke="#93C5FD" stroke-width="2.5"/>
+      <!-- Travel Belt / Ikat Pinggang -->
+      <rect x="-22" y="52" width="44" height="7" fill="#D97706"/>
+
+      <!-- Head & Thoughtful Ready Smile -->
+      <circle cx="0" cy="8" r="17" fill="#FCD34D"/>
+      <!-- Hair -->
+      <path d="M-17,4 Q0,-14 17,4 Q14,-16 -15,-14 Z" fill="#1E293B"/>
+      <circle cx="-5" cy="8" r="2.5" fill="#0F172A"/>
+      <circle cx="5" cy="8" r="2.5" fill="#0F172A"/>
+      <path d="M-5,15 Q0,21 5,15" stroke="#0F172A" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <circle cx="-10" cy="13" r="3" fill="#F87171" opacity="0.6"/>
+      <circle cx="10" cy="13" r="3" fill="#F87171" opacity="0.6"/>
+
+      <!-- TRAVEL BAG (TAS PUNGGUNG / SLEMPANG) -->
+      <g transform="translate(-18, 38)" filter="url(#shadow2)">
+        <ellipse cx="0" cy="0" rx="14" ry="18" fill="#92400E"/>
+        <path d="M-10,0 L10,0 L7,14 L-7,14 Z" fill="#B45309"/>
+        <!-- Buckle -->
+        <rect x="-4" y="2" width="8" height="6" rx="1" fill="#FDE047"/>
+        <!-- Strap across body -->
+        <path d="M0,-14 Q20,-2 32,18" stroke="#78350F" stroke-width="4.5" fill="none"/>
+      </g>
+
+      <!-- Hands Reaching out to Receive Mother's Bekal -->
+      <path d="M12,42 Q32,44 48,46" stroke="#1687F8" stroke-width="7" fill="none" stroke-linecap="round"/>
+      <circle cx="48" cy="46" r="5" fill="#FCD34D"/>
+    </g>
+  </g>
+
+  <!-- Interactive Context Items Callouts -->
+  <g transform="translate(420, 155)">
+    <!-- Bekal & Pesan Ibu Tag -->
+    <rect x="-65" y="-14" width="130" height="28" rx="14" fill="#FEF3C7" stroke="#D97706" stroke-width="2" filter="url(#shadow2)"/>
+    <text x="0" y="5" font-family="'Plus Jakarta Sans', sans-serif" font-size="11.5" font-weight="800" fill="#92400E" text-anchor="middle">🍱 BEKAL &amp; PESAN IBU</text>
+  </g>
+  <g transform="translate(350, 220)">
+    <!-- Tas Tag -->
+    <rect x="-35" y="-12" width="70" height="24" rx="12" fill="#E0F2FE" stroke="#0284C7" stroke-width="1.5" filter="url(#shadow2)"/>
+    <text x="0" y="4" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="800" fill="#0369A1" text-anchor="middle">🎒 TAS</text>
+  </g>
+</svg>

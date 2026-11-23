@@ -13,8 +13,15 @@ const HomePage = (() => {
         API.getBooks(),
         API.getModules()
       ]);
-      allBooks = booksData.books || [];
-      allModules = modulesData.modules || [];
+      allBooks = Array.isArray(booksData) ? booksData : (booksData && booksData.books ? booksData.books : []);
+      allModules = Array.isArray(modulesData) ? modulesData : (modulesData && modulesData.modules ? modulesData.modules : []);
+
+      // Always guarantee book-malin-kundang is first in allBooks
+      const malinIdx = allBooks.findIndex(b => b.id === 'book-malin-kundang');
+      if (malinIdx > 0) {
+        const [malin] = allBooks.splice(malinIdx, 1);
+        allBooks.unshift(malin);
+      }
     } catch (err) {
       console.error('Failed to load home data:', err);
     }
@@ -164,6 +171,84 @@ const HomePage = (() => {
         </section>
 
         <!-- ============================================== -->
+        <!-- SPECIAL SPOTLIGHT: MALIN DAN PERJALANAN DARI KAMPUNG LAUT -->
+        <!-- ============================================== -->
+        <section class="section" style="padding-top: 36px; padding-bottom: 24px;">
+          <div class="container">
+            <div class="featured-story-banner" style="background: linear-gradient(135deg, #0B2447 0%, #16425B 45%, #1687F8 100%); border-radius: 28px; padding: 36px 40px; color: white; box-shadow: 0 20px 50px rgba(11, 36, 71, 0.22); position: relative; overflow: hidden; display: grid; grid-template-columns: 240px 1fr; gap: 36px; align-items: center;">
+              
+              <!-- Left: Cover Artwork with badge -->
+              <div style="text-align: center;">
+                <div style="position: relative; display: inline-block; border-radius: 20px; overflow: hidden; box-shadow: 0 16px 36px rgba(0,0,0,0.35); border: 4px solid rgba(255,255,255,0.25);">
+                  <img src="assets/covers/malin_kundang.svg" alt="Malin dan Perjalanan dari Kampung Laut" style="width: 220px; aspect-ratio: 3/4; object-fit: cover; display: block;">
+                  <span style="position: absolute; top: 10px; left: 10px; background: #FEF3C7; color: #92400E; font-size: 0.72rem; font-weight: 800; padding: 4px 10px; border-radius: 9999px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+                    ⭐ REKOMENDASI PGPAUD
+                  </span>
+                </div>
+              </div>
+
+              <!-- Right: Story Details & Direct Slide Access -->
+              <div>
+                <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px;">
+                  <span style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(4px); padding: 4px 14px; border-radius: 9999px; font-size: 0.78rem; font-weight: 800;">
+                    📖 5 SLIDE BUKU CERITA
+                  </span>
+                  <span style="background: rgba(254, 240, 138, 0.25); color: #FEF08A; padding: 4px 14px; border-radius: 9999px; font-size: 0.78rem; font-weight: 800;">
+                    ❤️ KASIH IBU • BEBAS KUTUKAN BATU
+                  </span>
+                  <span style="background: rgba(16, 185, 129, 0.25); color: #A7F3D0; padding: 4px 14px; border-radius: 9999px; font-size: 0.78rem; font-weight: 800;">
+                    🎙️ REKAM SUARA & REFLEKSI
+                  </span>
+                </div>
+
+                <h2 style="font-size: 2.1rem; font-weight: 800; margin: 0 0 10px; line-height: 1.25; color: #FFFFFF;">
+                  Malin dan Perjalanan dari Kampung Laut
+                </h2>
+
+                <p style="font-size: 1.05rem; line-height: 1.6; color: #E2E8F0; margin: 0 0 18px; max-width: 650px;">
+                  Cerita adaptasi PGPAUD ramah anak tentang rasa syukur, identitas pesisir, literasi fonik suku kata, dan empati moral anak usia dini yang disajikan langsung dalam format slide buku cerita interaktif.
+                </p>
+
+                <!-- Direct Slide Quick Jump Buttons -->
+                <div style="background: rgba(255,255,255,0.12); backdrop-filter: blur(8px); border-radius: 16px; padding: 14px 18px; margin-bottom: 22px; border: 1px solid rgba(255,255,255,0.18);">
+                  <div style="font-size: 0.8rem; font-weight: 800; color: #FEF08A; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;">
+                    <i class="fas fa-layer-group"></i> Akses Langsung Tiap Slide Cerita:
+                  </div>
+                  <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                    <a href="#/reader/book-malin-kundang?page=1" class="btn btn-sm" style="background: white; color: #0B2447; font-weight: 800; border-radius: 9999px; padding: 6px 14px; font-size: 0.8rem;">
+                      Slide 1: Kampung Laut
+                    </a>
+                    <a href="#/reader/book-malin-kundang?page=2" class="btn btn-sm" style="background: white; color: #0B2447; font-weight: 800; border-radius: 9999px; padding: 6px 14px; font-size: 0.8rem;">
+                      Slide 2: Bekal & Pesan Ibu
+                    </a>
+                    <a href="#/reader/book-malin-kundang?page=3" class="btn btn-sm" style="background: white; color: #0B2447; font-weight: 800; border-radius: 9999px; padding: 6px 14px; font-size: 0.8rem;">
+                      Slide 3: Dunia Baru
+                    </a>
+                    <a href="#/reader/book-malin-kundang?page=4" class="btn btn-sm" style="background: white; color: #0B2447; font-weight: 800; border-radius: 9999px; padding: 6px 14px; font-size: 0.8rem;">
+                      Slide 4: Pertemuan Ibu
+                    </a>
+                    <a href="#/reader/book-malin-kundang?page=5" class="btn btn-sm" style="background: white; color: #0B2447; font-weight: 800; border-radius: 9999px; padding: 6px 14px; font-size: 0.8rem;">
+                      Slide 5: Akhir & Rekam Suara
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Main Action Buttons -->
+                <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+                  <a href="#/reader/book-malin-kundang?page=1" class="btn btn-primary" style="background: #F59E0B; border-color: #D97706; color: white; padding: 12px 28px; font-weight: 800; box-shadow: 0 4px 16px rgba(245, 158, 11, 0.4);">
+                    <i class="fas fa-book-open"></i> Mulai Baca Dari Slide 1
+                  </a>
+                  <a href="#/books/book-malin-kundang" class="btn btn-secondary" style="background: rgba(255,255,255,0.15); color: white; border: 1.5px solid rgba(255,255,255,0.4); padding: 12px 24px;">
+                    <i class="fas fa-circle-info"></i> Info Detail Buku & Semua Scene
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- ============================================== -->
         <!-- 2. SECTION — BUKU CERITA PILIHAN (SELECTED)    -->
         <!-- ============================================== -->
         <section id="section-selected" class="section">
@@ -210,7 +295,7 @@ const HomePage = (() => {
 
             <!-- Filter Categories -->
             <div class="filter-tabs">
-              ${['Semua', 'Cerita Rakyat', 'Fabel', 'Pendidikan', 'Moral', 'Petualangan'].map(cat => `
+              ${['Semua', 'Cerita Interaktif', 'Cerita Rakyat', 'Fabel', 'Pendidikan', 'Moral', 'Petualangan'].map(cat => `
                 <button class="filter-tab ${activeCategory === cat ? 'active' : ''}" onclick="HomePage.filterCategory('${cat}')">
                   ${cat}
                 </button>
@@ -293,13 +378,14 @@ const HomePage = (() => {
   function renderBookCard(book, lang, readNowLabel) {
     const title = lang === 'en' && book.title_en ? book.title_en : book.title_id;
     const synopsis = lang === 'en' && book.description_en ? book.description_en : book.description_id;
+    const isMalin = book.id === 'book-malin-kundang';
 
     return `
       <div class="carousel-card-item">
         <div class="book-card" onclick="window.location.hash='#/books/${book.id}'">
           <div class="book-cover-wrapper">
             <img src="${book.cover_url}" alt="${title}" class="book-cover-img" onerror="this.src='assets/cover_bintang.svg'">
-            <span class="book-badge">${book.category}</span>
+            <span class="book-badge" style="${isMalin ? 'background: #FEF3C7; color: #92400E; font-weight: 800;' : ''}">${isMalin ? '⭐ PGPAUD Interaktif' : book.category}</span>
           </div>
           <div class="book-card-body">
             <div class="book-meta">
@@ -309,7 +395,7 @@ const HomePage = (() => {
             <h3 class="book-title">${title}</h3>
             <p class="book-synopsis">${synopsis}</p>
             <div class="book-card-footer">
-              <span style="font-size: 0.85rem; font-weight: 700; color: var(--color-primary);">${readNowLabel}</span>
+              <span style="font-size: 0.85rem; font-weight: 700; color: var(--color-primary);">${isMalin ? 'Buka Slide 1' : readNowLabel}</span>
               <div class="book-btn-arrow"><i class="fas fa-arrow-right"></i></div>
             </div>
           </div>
@@ -321,7 +407,14 @@ const HomePage = (() => {
   function renderFilteredBooks(lang, readNowLabel) {
     let list = allBooks;
     if (activeCategory !== 'Semua') {
-      list = list.filter(b => b.category.toLowerCase() === activeCategory.toLowerCase());
+      list = list.filter(b => {
+        if (b.id === 'book-malin-kundang') {
+          if (activeCategory === 'Cerita Interaktif' || activeCategory === 'Cerita Rakyat' || activeCategory === 'Pendidikan' || activeCategory === 'Moral') {
+            return true;
+          }
+        }
+        return b.category && b.category.toLowerCase().includes(activeCategory.toLowerCase());
+      });
     }
     if (searchQuery.trim()) {
       const q = searchQuery.toLowerCase().trim();
@@ -343,26 +436,29 @@ const HomePage = (() => {
       `;
     }
 
-    return list.map(b => `
-      <div class="book-card" onclick="window.location.hash='#/books/${b.id}'">
-        <div class="book-cover-wrapper">
-          <img src="${b.cover_url}" alt="${lang === 'en' ? b.title_en : b.title_id}" class="book-cover-img" onerror="this.src='assets/cover_bintang.svg'">
-          <span class="book-badge">${b.category}</span>
-        </div>
-        <div class="book-card-body">
-          <div class="book-meta">
-            <span><i class="fas fa-child"></i> ${b.age_range}</span>
-            <span><i class="fas fa-clock"></i> ${b.read_time}</span>
+    return list.map(b => {
+      const isMalin = b.id === 'book-malin-kundang';
+      return `
+        <div class="book-card" onclick="window.location.hash='#/books/${b.id}'" style="${isMalin ? 'border: 2px solid var(--color-primary); box-shadow: 0 8px 24px rgba(22, 135, 248, 0.15);' : ''}">
+          <div class="book-cover-wrapper">
+            <img src="${b.cover_url}" alt="${lang === 'en' ? b.title_en : b.title_id}" class="book-cover-img" onerror="this.src='assets/cover_bintang.svg'">
+            <span class="book-badge" style="${isMalin ? 'background: #FEF3C7; color: #92400E; font-weight: 800;' : ''}">${isMalin ? '⭐ Rekomendasi PAUD' : b.category}</span>
           </div>
-          <h3 class="book-title">${lang === 'en' && b.title_en ? b.title_en : b.title_id}</h3>
-          <p class="book-synopsis">${lang === 'en' && b.description_en ? b.description_en : b.description_id}</p>
-          <div class="book-card-footer">
-            <span style="font-size: 0.85rem; font-weight: 700; color: var(--color-primary);">${readNowLabel}</span>
-            <div class="book-btn-arrow"><i class="fas fa-arrow-right"></i></div>
+          <div class="book-card-body">
+            <div class="book-meta">
+              <span><i class="fas fa-child"></i> ${b.age_range}</span>
+              <span><i class="fas fa-clock"></i> ${b.read_time}</span>
+            </div>
+            <h3 class="book-title">${lang === 'en' && b.title_en ? b.title_en : b.title_id}</h3>
+            <p class="book-synopsis">${lang === 'en' && b.description_en ? b.description_en : b.description_id}</p>
+            <div class="book-card-footer">
+              <span style="font-size: 0.85rem; font-weight: 700; color: var(--color-primary);">${isMalin ? 'Mulai Baca Slide' : readNowLabel}</span>
+              <div class="book-btn-arrow"><i class="fas fa-arrow-right"></i></div>
+            </div>
           </div>
         </div>
-      </div>
-    `).join('');
+      `;
+    }).join('');
   }
 
   function renderModuleCard(mod, openLabel) {

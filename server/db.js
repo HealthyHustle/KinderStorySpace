@@ -63,69 +63,61 @@ const initialDatabase = {
   books: [
     {
       id: 'book-malin-kundang',
-      title_id: 'Malin Kundang',
-      title_en: 'Malin Kundang: The Legend',
-      author: 'Cerita Rakyat Minangkabau',
+      title_id: 'Malin dan Perjalanan dari Kampung Laut',
+      title_en: 'Malin and the Journey from the Sea Village',
+      author: 'Kisah Rakyat Minangkabau (Adaptasi PGPAUD)',
       origin: 'Sumatera Barat, Indonesia',
-      category: 'Cerita Rakyat',
-      age_range: '5–8 Tahun',
-      read_time: '6 Menit',
+      category: 'Cerita Interaktif PAUD',
+      age_range: '4–7 Tahun',
+      read_time: '7 Menit',
       cover_url: '/assets/covers/malin_kundang.svg',
       has_pdf: true,
       pdf_url: '/api/books/book-malin-kundang/pdf',
       status: 'published',
       created_at: '2026-01-20T10:00:00.000Z',
-      updated_at: '2026-09-01T12:00:00.000Z',
-      description_id: 'Kisah rakyat tentang seorang anak yang merantau dan perjalanan hidupnya yang mengajarkan nilai menghormati orang tua, tanggung jawab, dan konsekuensi dari sebuah pilihan.',
-      description_en: 'A classic folklore about a young man who journeyed far away, teaching valuable lessons on filial piety, humility, respect for parents, and life consequences.',
+      updated_at: '2026-10-02T12:00:00.000Z',
+      description_id: 'Kisah interaktif ramah anak tentang kasih sayang keluarga, kehidupan pesisir laut, rasa syukur, empati, dan belajar membuat keputusan yang bijak.',
+      description_en: 'A warm and child-friendly interactive story about family love, coastal sea life, gratitude, empathy, and making thoughtful choices.',
       pages: [
         {
           page_number: 1,
-          image_url: '/assets/covers/malin_kundang.svg',
-          text_id: 'Dahulu kala, di sebuah perkampungan nelayan Pantai Air Manis di Sumatera Barat, hiduplah seorang janda bernama Mande Rubayah bersama anak laki-lakinya yang bernama Malin Kundang. Mereka hidup sederhana dan saling menyayangi.',
-          text_en: 'A long time ago, in a coastal village at Air Manis Beach in West Sumatra, lived a humble widow named Mande Rubayah and her beloved young son named Malin Kundang. They lived simply and loved each other dearly.'
+          title_id: 'Kampung Laut Tempat Malin Tinggal',
+          title_en: 'The Sea Village Where Malin Lives',
+          image_url: '/assets/stories/malin/scene1.svg',
+          text_id: 'Malin tinggal bersama ibunya di sebuah kampung dekat laut. Setiap hari mereka melihat perahu nelayan dan menikmati kehidupan di pantai.',
+          text_en: 'Malin lives with his mother in a village near the sea. Every day they watch fishing boats and enjoy life along the warm shore.'
         },
         {
           page_number: 2,
-          image_url: '/assets/covers/malin_kundang.svg',
-          text_id: 'Malin adalah anak yang rajin dan tangkas. Ketika beranjak dewasa, ia meminta izin kepada ibunya untuk merantau menaiki kapal besar ke negeri seberang demi mengubah nasib kehidupan mereka.',
-          text_en: 'Malin grew into a diligent and hardworking youth. When he came of age, he asked his mother for permission to sail across the ocean on a merchant ship to seek a better future.'
+          title_id: 'Malin Ingin Melihat Dunia',
+          title_en: 'Malin Wants to See the World',
+          image_url: '/assets/stories/malin/scene2.svg',
+          text_id: 'Malin ingin belajar dan melihat dunia yang lebih luas. Ibunya memberikan pesan agar Malin selalu mengingat rumahnya.',
+          text_en: 'Malin wishes to learn and explore the wider world. His mother gives him warm advice to always cherish and remember his home.'
         },
         {
           page_number: 3,
-          image_url: '/assets/covers/malin_kundang.svg',
-          text_id: 'Dengan berat hati bercampur doa tulus, Mande Rubayah merelakan Malin pergi. "Pergilah anakku, jaga dirimu baik-baik dan jangan pernah lupakan ibumu," bisik sang ibu di tepi dermaga.',
-          text_en: 'With a heavy heart and tearful prayers, Mande Rubayah let him go. "Go, my son, take good care of yourself and never forget your mother," she whispered on the seashore.'
+          title_id: 'Malin Menjelajah Dunia',
+          title_en: 'Malin Explores the World',
+          image_url: '/assets/stories/malin/scene3.svg',
+          text_id: 'Setelah lama pergi, Malin menjadi pedagang yang berhasil. Ia memiliki kapal besar dan membawa berbagai barang dagangan berharga.',
+          text_en: 'After traveling far, Malin becomes a successful merchant. He commands a grand ship laden with precious goods and spices.'
         },
         {
           page_number: 4,
-          image_url: '/assets/covers/malin_kundang.svg',
-          text_id: 'Tahun demi tahun berlalu. Malin bekerja sangat keras hingga menjadi saudagar kaya raya yang memiliki kapal megah bertiang tinggi dan anak buah yang banyak.',
-          text_en: 'Years went by. Malin worked tirelessly and eventually became a prosperous merchant owning a magnificent tall-masted ship and many crew members.'
+          title_id: 'Malin Bertemu Ibunya',
+          title_en: 'Malin Meets His Mother',
+          image_url: '/assets/stories/malin/scene4.svg',
+          text_id: 'Ketika bertemu ibunya, Malin merasa malu karena hidupnya sudah berubah. Ia lupa bahwa ibunya selalu mendukungnya dengan tulus.',
+          text_en: 'When meeting his mother again, Malin feels shy and awkward because his lifestyle has changed. He pauses and reflects on her endless love.'
         },
         {
           page_number: 5,
-          image_url: '/assets/covers/malin_kundang.svg',
-          text_id: 'Suatu hari, kapal megah Malin berlabuh di pantai kelahirannya. Mande Rubayah yang sudah tua renta berlari menyambut sang anak dengan air mata bahagia. "Malin, anakku! Kau sudah pulang!" serunya riang.',
-          text_en: 'One sunny day, Malin’s magnificent vessel anchored at his birthplace. The elderly Mande Rubayah hurried down to the shore with tears of joy, crying out: "Malin, my son! You have returned!"'
-        },
-        {
-          page_number: 6,
-          image_url: '/assets/covers/malin_kundang.svg',
-          text_id: 'Namun Malin merasa malu mengakui ibunya yang berpakaian lusuh di hadapan istrinya yang bangsawan dan awak kapalnya. Ia mendorong ibunya hingga terjatuh ke pasir.',
-          text_en: 'Ashamed of his mother’s humble, ragged clothes in front of his wealthy wife and crew, Malin harshly denied knowing her and pushed her onto the sands.'
-        },
-        {
-          page_number: 7,
-          image_url: '/assets/covers/malin_kundang.svg',
-          text_id: 'Hati Mande Rubayah teramat hancur. Langit tiba-tiba menjadi gelap gulita, petir menggelegar, dan badai dahsyat menghantam kapal Malin hingga kapal dan dirinya membeku menjadi batu karang di tepi pantai.',
-          text_en: 'Deeply broken-hearted, his mother wept. Sudden dark clouds covered the sky, thunder roared, and a fierce storm struck Malin’s ship, turning it and Malin into stone on the seashore.'
-        },
-        {
-          page_number: 8,
-          image_url: '/assets/covers/malin_kundang.svg',
-          text_id: 'Pesan Moral: Hormatilah orang tua yang telah membesarkan kita dengan tulus kasih sayang. Kekayaan harta tidak ada artinya tanpa rasa bakti dan kerendahan hati.',
-          text_en: 'Moral Lesson: Always honor and respect the parents who raised you with unconditional love. Worldly wealth is meaningless without gratitude and humility.'
+          title_id: 'Bagaimana Akhir Cerita Malin?',
+          title_en: 'How Does Malin\'s Story End?',
+          image_url: '/assets/stories/malin/scene5.svg',
+          text_id: 'Malin menyadari bahwa kasih sayang keluarga adalah yang paling berharga. Ia meminta maaf, memeluk ibunya, dan belajar bahwa keberhasilan sejati diraih bersama orang-orang tercinta.',
+          text_en: 'Malin realizes that family love is life\'s greatest treasure. He warmly apologizes, hugs his mother, and discovers true joy together.'
         }
       ]
     },
@@ -674,7 +666,8 @@ class Database {
   }
 
   getBookById(id) {
-    return (this.data.books || []).find(b => b.id === id);
+    const cleanId = (id || '').split('?')[0];
+    return (this.data.books || []).find(b => b.id === cleanId);
   }
 
   createBook(bookData) {
@@ -798,14 +791,15 @@ class Database {
   // Reading Progress
   saveReadingProgress(userId, bookId, page, language = 'id') {
     if (!this.data.reading_progress) this.data.reading_progress = {};
-    const key = `${userId}_${bookId}`;
-    const book = this.getBookById(bookId);
+    const cleanBookId = (bookId || '').split('?')[0];
+    const key = `${userId}_${cleanBookId}`;
+    const book = this.getBookById(cleanBookId);
     const totalPages = book && book.pages ? book.pages.length : 1;
     const progressPct = Math.min(100, Math.round((page / totalPages) * 100));
 
     this.data.reading_progress[key] = {
       user_id: userId,
-      book_id: bookId,
+      book_id: cleanBookId,
       current_page: page,
       language: language,
       progress_pct: progressPct,
@@ -826,7 +820,8 @@ class Database {
 
   getReadingProgress(userId, bookId) {
     if (!this.data.reading_progress) return null;
-    return this.data.reading_progress[`${userId}_${bookId}`] || null;
+    const cleanBookId = (bookId || '').split('?')[0];
+    return this.data.reading_progress[`${userId}_${cleanBookId}`] || null;
   }
 
   // Stats for Admin

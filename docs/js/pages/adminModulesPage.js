@@ -7,7 +7,7 @@ const AdminModulesPage = (() => {
   async function render() {
     try {
       const data = await API.getModules();
-      modulesList = data.modules || [];
+      modulesList = Array.isArray(data) ? data : (data && data.modules ? data.modules : []);
     } catch (err) {
       console.error('Failed to load modules:', err);
     }

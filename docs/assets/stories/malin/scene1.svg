@@ -1,0 +1,229 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#BAE6FD"/>
+      <stop offset="60%" stop-color="#E0F2FE"/>
+      <stop offset="100%" stop-color="#FEF08A"/>
+    </linearGradient>
+    <linearGradient id="seaGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#0369A1"/>
+    </linearGradient>
+    <linearGradient id="sandGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0B2447" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="800" height="320" fill="url(#skyGrad1)"/>
+
+  <!-- Golden Sun -->
+  <g transform="translate(130, 85)">
+    <circle cx="0" cy="0" r="42" fill="#FBBF24" opacity="0.3"/>
+    <circle cx="0" cy="0" r="32" fill="#F59E0B"/>
+    <!-- Smiling face -->
+    <circle cx="-10" cy="-6" r="3.5" fill="#78350F"/>
+    <circle cx="10" cy="-6" r="3.5" fill="#78350F"/>
+    <path d="M-8,6 Q0,15 8,6" stroke="#78350F" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <circle cx="-15" cy="0" r="4" fill="#F87171" opacity="0.6"/>
+    <circle cx="15" cy="0" r="4" fill="#F87171" opacity="0.6"/>
+  </g>
+
+  <!-- Fluffy Clouds -->
+  <g fill="#FFFFFF" opacity="0.85">
+    <path d="M300,70 Q320,50 345,65 Q375,45 405,65 Q425,55 440,75 Q445,95 425,100 L320,100 Q295,95 300,70 Z"/>
+    <path d="M620,95 Q640,80 660,90 Q685,75 710,90 Q725,85 735,100 L630,100 Z" opacity="0.7"/>
+  </g>
+
+  <!-- Flying Seagulls -->
+  <g stroke="#0369A1" stroke-width="2.5" fill="none" stroke-linecap="round">
+    <path d="M220,110 Q230,100 240,110 Q250,100 260,110"/>
+    <path d="M265,90 Q273,82 281,90 Q289,82 297,90"/>
+    <path d="M510,75 Q520,65 530,75 Q540,65 550,75"/>
+  </g>
+
+  <!-- Sea -->
+  <rect y="210" width="800" height="170" fill="url(#seaGrad1)"/>
+
+  <!-- Animated-like Ocean Wave Layers -->
+  <path d="M0,230 Q100,215 200,230 Q300,245 400,230 Q500,215 600,230 Q700,245 800,230 L800,270 L0,270 Z" fill="#38BDF8" opacity="0.4"/>
+  <path d="M0,250 Q110,235 220,250 Q330,265 440,250 Q550,235 660,250 Q750,265 800,250 L800,310 L0,310 Z" fill="#0284C7" opacity="0.5"/>
+
+  <!-- Sandy Shore / Beach -->
+  <path d="M0,310 Q250,285 520,330 Q680,355 800,330 L800,500 L0,500 Z" fill="url(#sandGrad1)"/>
+  <path d="M0,345 Q260,320 530,365 Q690,390 800,365 L800,500 L0,500 Z" fill="#FDE68A" opacity="0.6"/>
+
+  <!-- Palm Trees on the Left -->
+  <g transform="translate(45, 170)">
+    <!-- Trunk -->
+    <path d="M20,180 Q35,90 10,20 Q18,90 28,180 Z" fill="#78350F"/>
+    <!-- Fronds -->
+    <path d="M10,20 Q-40,10 -60,45" stroke="#15803D" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <path d="M10,20 Q-30,-20 -20,-50" stroke="#16A34A" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <path d="M10,20 Q30,-30 50,-45" stroke="#22C55E" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <path d="M10,20 Q60,0 75,35" stroke="#16A34A" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <path d="M10,20 Q40,40 50,65" stroke="#15803D" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <!-- Coconuts -->
+    <circle cx="4" cy="24" r="7" fill="#451A03"/>
+    <circle cx="16" cy="26" r="7" fill="#451A03"/>
+  </g>
+
+  <!-- INTERACTIVE OBJECT 1: RUMAH MALIN (Right Side Shore) -->
+  <g id="scene1-obj-rumah" transform="translate(610, 240)" filter="url(#softGlow)" style="cursor: pointer;">
+    <!-- Wooden Stilts -->
+    <line x1="25" y1="130" x2="25" y2="175" stroke="#78350F" stroke-width="6" stroke-linecap="round"/>
+    <line x1="65" y1="130" x2="65" y2="175" stroke="#78350F" stroke-width="6" stroke-linecap="round"/>
+    <line x1="105" y1="130" x2="105" y2="175" stroke="#78350F" stroke-width="6" stroke-linecap="round"/>
+    <line x1="145" y1="130" x2="145" y2="175" stroke="#78350F" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- House Walls -->
+    <rect x="20" y="65" width="130" height="70" rx="6" fill="#D97706"/>
+    <!-- Wood Planks Detail -->
+    <line x1="20" y1="85" x2="150" y2="85" stroke="#B45309" stroke-width="2"/>
+    <line x1="20" y1="105" x2="150" y2="105" stroke="#B45309" stroke-width="2"/>
+    <line x1="20" y1="125" x2="150" y2="125" stroke="#B45309" stroke-width="2"/>
+
+    <!-- Window with friendly light -->
+    <rect x="35" y="80" width="28" height="28" rx="4" fill="#FEF08A" stroke="#78350F" stroke-width="2.5"/>
+    <line x1="49" y1="80" x2="49" y2="108" stroke="#78350F" stroke-width="2"/>
+    <line x1="35" y1="94" x2="63" y2="94" stroke="#78350F" stroke-width="2"/>
+
+    <!-- Wooden Door -->
+    <rect x="95" y="80" width="30" height="55" rx="3" fill="#92400E" stroke="#451A03" stroke-width="2"/>
+    <circle cx="102" cy="108" r="3" fill="#FDE047"/>
+
+    <!-- Minang/Coastal Curved Roof -->
+    <path d="M5,65 Q85,25 165,65 L175,55 Q85,-5 -5,55 Z" fill="#991B1B"/>
+    <path d="M10,65 Q85,15 160,65 L145,35 Q85,0 25,35 Z" fill="#B91C1C"/>
+
+    <!-- Clickable Interactive Hint Badge -->
+    <g transform="translate(85, -15)">
+      <rect x="-35" y="-14" width="70" height="28" rx="14" fill="#FFFFFF" stroke="#1687F8" stroke-width="2" filter="url(#softGlow)"/>
+      <text x="0" y="5" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="800" fill="#0B2447" text-anchor="middle">🏠 RUMAH</text>
+    </g>
+  </g>
+
+  <!-- INTERACTIVE OBJECT 2: PERAHU NELAYAN (Floating at Sea) -->
+  <g id="scene1-obj-perahu" transform="translate(390, 205)" filter="url(#softGlow)" style="cursor: pointer;">
+    <!-- Boat Hull -->
+    <path d="M-70,20 Q0,45 70,20 L60,48 Q0,62 -60,48 Z" fill="#D97706"/>
+    <path d="M-62,20 L62,20 L52,35 L-52,35 Z" fill="#F59E0B"/>
+    <!-- Mast -->
+    <line x1="5" y1="-65" x2="5" y2="25" stroke="#78350F" stroke-width="5" stroke-linecap="round"/>
+    <!-- Sail -->
+    <path d="M8,-60 Q55,-25 8,15 Z" fill="#FFFFFF" filter="url(#softGlow)"/>
+    <path d="M8,-30 Q40,-12 8,15 Z" fill="#FEF08A"/>
+    <!-- Flag -->
+    <polygon points="5,-65 26,-56 5,-47" fill="#EF4444"/>
+
+    <!-- Clickable Interactive Hint Badge -->
+    <g transform="translate(5, -80)">
+      <rect x="-38" y="-14" width="76" height="28" rx="14" fill="#FFFFFF" stroke="#1687F8" stroke-width="2" filter="url(#softGlow)"/>
+      <text x="0" y="5" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="800" fill="#0B2447" text-anchor="middle">⛵ PERAHU</text>
+    </g>
+  </g>
+
+  <!-- INTERACTIVE OBJECT 3: LAUT (Sea Waves Area) -->
+  <g id="scene1-obj-laut" transform="translate(220, 230)" filter="url(#softGlow)" style="cursor: pointer;">
+    <!-- Splashes & Waves -->
+    <path d="M-50,0 Q-25,-15 0,0 Q25,15 50,0 Q75,-15 100,0" stroke="#FFFFFF" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.9"/>
+    <path d="M-30,20 Q-5,5 20,20 Q45,35 70,20" stroke="#E0F2FE" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.8"/>
+    <!-- Clickable Interactive Hint Badge -->
+    <g transform="translate(25, -20)">
+      <rect x="-32" y="-14" width="64" height="28" rx="14" fill="#FFFFFF" stroke="#1687F8" stroke-width="2" filter="url(#softGlow)"/>
+      <text x="0" y="5" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="800" fill="#0B2447" text-anchor="middle">🌊 LAUT</text>
+    </g>
+  </g>
+
+  <!-- INTERACTIVE OBJECT 4: IKAN (Cute fish jumping near shore) -->
+  <g id="scene1-obj-ikan" transform="translate(190, 280)" filter="url(#softGlow)" style="cursor: pointer;">
+    <!-- Fish 1 -->
+    <path d="M0,0 Q20,-18 40,0 Q20,18 0,0 Z" fill="#FB923C"/>
+    <circle cx="10" cy="-2" r="3" fill="#000000"/>
+    <circle cx="11" cy="-3" r="1" fill="#FFFFFF"/>
+    <polygon points="40,0 52,-10 48,0 52,10" fill="#EA580C"/>
+    <!-- Fish Fins -->
+    <path d="M18,-9 Q24,-16 28,-7 Z" fill="#EA580C"/>
+    
+    <!-- Water droplets -->
+    <circle cx="-5" cy="-8" r="3" fill="#FFFFFF"/>
+    <circle cx="20" cy="-20" r="2.5" fill="#FFFFFF"/>
+    <circle cx="45" cy="-12" r="2" fill="#FFFFFF"/>
+
+    <!-- Clickable Interactive Hint Badge -->
+    <g transform="translate(20, -32)">
+      <rect x="-30" y="-14" width="60" height="28" rx="14" fill="#FFFFFF" stroke="#1687F8" stroke-width="2" filter="url(#softGlow)"/>
+      <text x="0" y="5" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="800" fill="#0B2447" text-anchor="middle">🐟 IKAN</text>
+    </g>
+  </g>
+
+  <!-- CHARACTERS: YOUNG MALIN & IBU MANDE ON THE SHORE -->
+  <g transform="translate(420, 340)">
+    <!-- MOTHER (MANDE RUBAYAH) -->
+    <g transform="translate(0, 0)">
+      <!-- Long Skirt/Bawahan Batik -->
+      <path d="M-18,65 L18,65 L24,120 L-24,120 Z" fill="#B45309"/>
+      <line x1="-12" y1="85" x2="16" y2="85" stroke="#FDE68A" stroke-width="1.5"/>
+      <line x1="-16" y1="105" x2="18" y2="105" stroke="#FDE68A" stroke-width="1.5"/>
+      <!-- Kebaya/Blouse Warm Terracotta -->
+      <rect x="-20" y="25" width="40" height="45" rx="10" fill="#EA580C"/>
+      <!-- Soft Veil / Kerudung Kuning Lembut -->
+      <path d="M-18,12 Q0,-2 18,12 L22,48 Q0,54 -22,48 Z" fill="#FDE047"/>
+      <!-- Face -->
+      <circle cx="0" cy="14" r="16" fill="#FCD34D"/>
+      <!-- Friendly Gentle Eyes & Loving Smile -->
+      <path d="M-7,12 Q-4,8 -1,12" stroke="#451A03" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M1,12 Q4,8 7,12" stroke="#451A03" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M-5,19 Q0,25 5,19" stroke="#451A03" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <circle cx="-9" cy="18" r="3.5" fill="#FCA5A5" opacity="0.6"/>
+      <circle cx="9" cy="18" r="3.5" fill="#FCA5A5" opacity="0.6"/>
+      <!-- Arm resting gently on Malin -->
+      <path d="M-18,35 Q-30,45 -40,55" stroke="#EA580C" stroke-width="7" fill="none" stroke-linecap="round"/>
+      <circle cx="-40" cy="55" r="5" fill="#FCD34D"/>
+    </g>
+
+    <!-- YOUNG MALIN (BOY) -->
+    <g transform="translate(-60, 25)">
+      <!-- Shorts / Celana Katun -->
+      <rect x="-14" y="55" width="13" height="25" rx="4" fill="#0284C7"/>
+      <rect x="1" y="55" width="13" height="25" rx="4" fill="#0284C7"/>
+      <!-- Legs & Feet -->
+      <rect x="-12" y="78" width="9" height="18" fill="#FCD34D"/>
+      <rect x="3" y="78" width="9" height="18" fill="#FCD34D"/>
+      <ellipse cx="-7" cy="97" rx="8" ry="4" fill="#B45309"/>
+      <ellipse cx="8" cy="97" rx="8" ry="4" fill="#B45309"/>
+
+      <!-- Tunic / Baju Biru Ceria -->
+      <rect x="-18" y="20" width="36" height="38" rx="8" fill="#1687F8"/>
+      <!-- Striped detail -->
+      <path d="M-18,34 L18,34" stroke="#60A5FA" stroke-width="3"/>
+      <!-- Neck & Head -->
+      <circle cx="0" cy="5" r="16" fill="#FCD34D"/>
+      <!-- Cheerful Hair -->
+      <path d="M-16,0 Q0,-16 16,0 Q12,-16 -14,-14 Z" fill="#1E293B"/>
+      <!-- Cute Eyes & Big Happy Smile -->
+      <circle cx="-5" cy="5" r="2.5" fill="#0F172A"/>
+      <circle cx="5" cy="5" r="2.5" fill="#0F172A"/>
+      <path d="M-5,11 Q0,18 5,11" stroke="#0F172A" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <!-- Rosy cheeks -->
+      <circle cx="-9" cy="9" r="3" fill="#F87171" opacity="0.6"/>
+      <circle cx="9" cy="9" r="3" fill="#F87171" opacity="0.6"/>
+      <!-- Arms: Left arm waving up cheerfully -->
+      <path d="M-16,28 Q-28,15 -25,-2" stroke="#1687F8" stroke-width="7" fill="none" stroke-linecap="round"/>
+      <circle cx="-25" cy="-2" r="5" fill="#FCD34D"/>
+    </g>
+  </g>
+
+  <!-- Small Shells and Starfish on Sand -->
+  <g fill="#F97316" transform="translate(320, 440)">
+    <polygon points="0,-8 2,-2 8,-2 3,2 5,8 0,4 -5,8 -3,2 -8,-2 -2,-2" opacity="0.8"/>
+  </g>
+  <g fill="#EC4899" transform="translate(560, 460)">
+    <ellipse cx="0" cy="0" rx="6" ry="4" opacity="0.7"/>
+  </g>
+</svg>

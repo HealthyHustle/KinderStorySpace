@@ -7,7 +7,7 @@ const AdminBooksPage = (() => {
   async function render() {
     try {
       const data = await API.getBooks();
-      booksList = data.books || [];
+      booksList = Array.isArray(data) ? data : (data && data.books ? data.books : []);
     } catch (err) {
       console.error('Failed to load books for admin:', err);
     }

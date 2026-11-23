@@ -17,7 +17,7 @@ const ModulesPage = (() => {
   async function render() {
     try {
       const data = await API.getModules();
-      allModules = data.modules || [];
+      allModules = Array.isArray(data) ? data : (data && data.modules ? data.modules : []);
     } catch (err) {
       console.error('Failed to load modules:', err);
     }

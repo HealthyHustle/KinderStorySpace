@@ -86,26 +86,32 @@ const API = (() => {
 
     // Books
     getBooks: async (params = {}) => {
+      let res = null;
       if (!forceStaticMode) {
         try {
           const query = new URLSearchParams(params).toString();
-          return await request(`/books${query ? '?' + query : ''}`, { method: 'GET' });
+          res = await request(`/books${query ? '?' + query : ''}`, { method: 'GET' });
         } catch {
           // Fall through to ClientDB
         }
       }
-      return ClientDB.getBooks(params);
+      if (!res) {
+        res = ClientDB.getBooks(params);
+      }
+      const list = Array.isArray(res) ? res : (res && res.books ? res.books : []);
+      return { total: list.length, books: list };
     },
 
     getBookById: async (id) => {
+      const cleanId = (id || '').split('?')[0];
       if (!forceStaticMode) {
         try {
-          return await request(`/books/${id}`, { method: 'GET' });
+          return await request(`/books/${cleanId}`, { method: 'GET' });
         } catch {
           // Fall through to ClientDB
         }
       }
-      return ClientDB.getBookById(id);
+      return ClientDB.getBookById(cleanId);
     },
 
     createBook: async (data) => {
@@ -167,15 +173,20 @@ const API = (() => {
 
     // Modules
     getModules: async (params = {}) => {
+      let res = null;
       if (!forceStaticMode) {
         try {
           const query = new URLSearchParams(params).toString();
-          return await request(`/modules${query ? '?' + query : ''}`, { method: 'GET' });
+          res = await request(`/modules${query ? '?' + query : ''}`, { method: 'GET' });
         } catch {
           // Fall through to ClientDB
         }
       }
-      return ClientDB.getModules(params);
+      if (!res) {
+        res = ClientDB.getModules(params);
+      }
+      const list = Array.isArray(res) ? res : (res && res.modules ? res.modules : []);
+      return { total: list.length, modules: list };
     },
 
     getModuleById: async (id) => {

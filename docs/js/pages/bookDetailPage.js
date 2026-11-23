@@ -5,9 +5,10 @@ const BookDetailPage = (() => {
 
   async function render(bookId) {
     currentLang = window.appLanguage || 'id';
+    const cleanId = (bookId || '').split('?')[0];
 
     try {
-      currentBook = await API.getBookById(bookId);
+      currentBook = await API.getBookById(cleanId);
     } catch (err) {
       return `
         <div>
@@ -44,7 +45,11 @@ const BookDetailPage = (() => {
         startReading: 'Mulai Membaca',
         downloadPdf: 'Download PDF',
         pagesCount: 'Jumlah Halaman',
-        status: 'Status Akses'
+        status: 'Status Akses',
+        slidesTitle: 'DAFTAR SLIDE BUKU CERITA',
+        slidesSubtitle: 'Jelajahi dan buka langsung halaman/slide cerita interaktif:',
+        openSlide: 'Buka Slide',
+        startFromSlide1: 'Mulai Dari Slide 1'
       },
       en: {
         back: 'Back to Catalog',
@@ -57,7 +62,11 @@ const BookDetailPage = (() => {
         startReading: 'Start Reading',
         downloadPdf: 'Download PDF',
         pagesCount: 'Total Pages',
-        status: 'Access Status'
+        status: 'Access Status',
+        slidesTitle: 'STORYBOOK SLIDES LIST',
+        slidesSubtitle: 'Explore and open interactive story slides directly:',
+        openSlide: 'Open Slide',
+        startFromSlide1: 'Start From Slide 1'
       }
     }[currentLang];
 
@@ -130,7 +139,7 @@ const BookDetailPage = (() => {
 
               <!-- Two Main Buttons -->
               <div class="book-action-buttons">
-                <a href="#/reader/${b.id}" class="btn btn-primary" style="padding: 16px 36px; font-size: 1.05rem;">
+                <a href="#/reader/${b.id}?page=1" class="btn btn-primary" style="padding: 16px 36px; font-size: 1.05rem;">
                   <i class="fas fa-book-open"></i> ${t.startReading}
                 </a>
 
@@ -138,6 +147,52 @@ const BookDetailPage = (() => {
                   <i class="fas fa-file-pdf" style="color: var(--color-danger);"></i> ${t.downloadPdf}
                 </button>
               </div>
+            </div>
+          </div>
+
+          <!-- DAFTAR SLIDE BUKU CERITA (LENGKAP SEMUA SCENE) -->
+          <div class="book-slides-section" style="margin-top: 48px; padding-top: 36px; border-top: 2px dashed var(--color-border, #CBD5E1);">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; flex-wrap: wrap; gap: 12px;">
+              <div>
+                <span class="badge badge-primary" style="font-size: 0.8rem; margin-bottom: 6px;">
+                  <i class="fas fa-layer-group"></i> ${t.slidesTitle}
+                </span>
+                <h2 style="font-size: 1.75rem; color: var(--color-dark-navy, #0B2447); margin: 0; font-weight: 800;">
+                  Isi Cerita Tiap Slide (${(b.pages || []).length} Slide)
+                </h2>
+                <p style="color: var(--color-text-muted, #64748B); margin: 4px 0 0; font-size: 0.95rem;">
+                  ${t.slidesSubtitle}
+                </p>
+              </div>
+              <a href="#/reader/${b.id}?page=1" class="btn btn-primary btn-sm" style="padding: 10px 22px;">
+                <i class="fas fa-book-open"></i> ${t.startFromSlide1}
+              </a>
+            </div>
+
+            <div class="slides-preview-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 22px;">
+              ${(b.pages || []).map((p, idx) => `
+                <div class="slide-preview-card" style="background: white; border: 1.5px solid var(--color-border, #E2E8F0); border-radius: 20px; overflow: hidden; box-shadow: 0 4px 16px rgba(11,36,71,0.06); display: flex; flex-direction: column; transition: all 0.25s ease;" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='var(--color-primary, #1687F8)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='#E2E8F0';">
+                  <div style="height: 180px; background: #EEF7FF; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+                    <img src="${p.image_url || b.cover_url}" alt="Slide ${idx + 1}" style="width: 100%; height: 100%; object-fit: contain; padding: 10px;">
+                    <span style="position: absolute; top: 12px; left: 12px; background: rgba(11, 36, 71, 0.88); color: white; padding: 4px 12px; border-radius: 9999px; font-size: 0.78rem; font-weight: 800;">
+                      Slide ${idx + 1}
+                    </span>
+                  </div>
+                  <div style="padding: 20px; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                    <div>
+                      <h4 style="font-size: 1.12rem; font-weight: 800; color: var(--color-dark-navy, #0B2447); margin-bottom: 8px;">
+                        ${isEn && p.title_en ? p.title_en : (p.title_id || `Halaman ${idx + 1}`)}
+                      </h4>
+                      <p style="font-size: 0.95rem; color: #334155; line-height: 1.6; margin: 0;">
+                        ${isEn && p.text_en ? p.text_en : p.text_id}
+                      </p>
+                    </div>
+                    <a href="#/reader/${b.id}?page=${idx + 1}" class="btn btn-secondary btn-sm" style="margin-top: 18px; text-align: center; justify-content: center; width: 100%;">
+                      <i class="fas fa-play"></i> ${t.openSlide} ${idx + 1}
+                    </a>
+                  </div>
+                </div>
+              `).join('')}
             </div>
           </div>
         </div>

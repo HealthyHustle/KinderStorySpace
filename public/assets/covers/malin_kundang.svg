@@ -2,14 +2,23 @@
   <defs>
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#1687F8" />
-      <stop offset="100%" stop-color="#0B4D9C" />
+      <stop offset="55%" stop-color="#0284C7" />
+      <stop offset="100%" stop-color="#0369A1" />
     </linearGradient>
-    <radialGradient id="glowGrad" cx="50%" cy="35%" r="60%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.35" />
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    <radialGradient id="glowGrad" cx="50%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
     </radialGradient>
+    <linearGradient id="sunGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE047" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+    <linearGradient id="boatGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D97706" />
+      <stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
     <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0B2447" flood-opacity="0.15"/>
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0B2447" flood-opacity="0.18"/>
     </filter>
   </defs>
 
@@ -17,64 +26,119 @@
   <rect width="600" height="800" rx="36" fill="url(#bgGrad)" />
   <rect width="600" height="800" rx="36" fill="url(#glowGrad)" />
 
-  <!-- Playful Background Blobs & Stars -->
-  <circle cx="90" cy="110" r="18" fill="#FFC928" opacity="0.8"/>
-  <circle cx="520" cy="180" r="12" fill="#FFFFFF" opacity="0.6"/>
-  <circle cx="500" cy="680" r="28" fill="#FFC928" opacity="0.5"/>
-  <circle cx="70" cy="700" r="22" fill="#FFFFFF" opacity="0.4"/>
+  <!-- Playful Background Stars & Floating Bubbles -->
+  <circle cx="85" cy="110" r="16" fill="#FFC928" opacity="0.85"/>
+  <circle cx="515" cy="165" r="14" fill="#FFFFFF" opacity="0.6"/>
+  <circle cx="510" cy="510" r="24" fill="#FFC928" opacity="0.5"/>
+  <circle cx="75" cy="530" r="18" fill="#FFFFFF" opacity="0.45"/>
   
   <!-- Sparkles -->
-  <path d="M510,90 L514,105 L529,109 L514,113 L510,128 L506,113 L491,109 L506,105 Z" fill="#FFC928" />
-  <path d="M120,240 L122,250 L132,252 L122,254 L120,264 L118,254 L108,252 L118,250 Z" fill="#FFFFFF" opacity="0.8" />
-  
-  <!-- Clouds at bottom -->
-  <path d="M-20,740 Q60,680 140,730 Q220,670 320,720 Q420,680 500,730 Q580,690 620,750 L620,800 L-20,800 Z" fill="#FFFFFF" opacity="0.25"/>
-  <path d="M-20,760 Q90,720 200,750 Q310,710 430,750 Q520,720 620,770 L620,800 L-20,800 Z" fill="#FFFFFF" opacity="0.4"/>
+  <path d="M510,85 L514,100 L529,104 L514,108 L510,123 L506,108 L491,104 L506,100 Z" fill="#FFC928" />
+  <path d="M110,210 L112,220 L122,222 L112,224 L110,234 L108,224 L98,222 L108,220 Z" fill="#FFFFFF" opacity="0.9" />
 
   <!-- Badge / Tag -->
-  <g transform="translate(48, 52)">
-    <rect width="160" height="38" rx="19" fill="#FFFFFF" opacity="0.95" filter="url(#shadow)"/>
-    <text x="80" y="24" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="13" font-weight="700" fill="#0B2447" text-anchor="middle" letter-spacing="1">CERITA RAKYAT</text>
+  <g transform="translate(48, 50)">
+    <rect width="210" height="40" rx="20" fill="#FFFFFF" opacity="0.96" filter="url(#shadow)"/>
+    <circle cx="24" cy="20" r="10" fill="#1687F8"/>
+    <text x="24" y="24" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="12" fill="#FFF" text-anchor="middle" font-weight="800">★</text>
+    <text x="116" y="25" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="12" font-weight="800" fill="#0B2447" text-anchor="middle" letter-spacing="1">CERITA INTERAKTIF</text>
   </g>
 
   <!-- Central Graphic Container -->
-  <g transform="translate(300, 360)" filter="url(#shadow)">
-    <circle cx="0" cy="0" r="160" fill="#FFFFFF" opacity="0.95"/>
-    <circle cx="0" cy="0" r="142" fill="#1687F8" opacity="0.12"/>
+  <g transform="translate(300, 310)" filter="url(#shadow)">
+    <!-- White Circle Backdrop -->
+    <circle cx="0" cy="0" r="165" fill="#FFFFFF" opacity="0.98"/>
+    <circle cx="0" cy="0" r="146" fill="#E0F2FE" opacity="0.55"/>
     
-      <!-- Big Ship at Sea -->
-      <path d="M-90,30 Q0,55 90,30 L70,80 Q0,95 -70,80 Z" fill="#D97706"/>
-      <path d="M-80,30 L80,30 L65,55 L-65,55 Z" fill="#F59E0B"/>
-      <!-- Mast & Sails -->
-      <line x1="0" y1="-100" x2="0" y2="30" stroke="#78350F" stroke-width="8" stroke-linecap="round"/>
-      <path d="M5,-90 Q70,-45 5,10 Z" fill="#FFFFFF" filter="url(#shadow)"/>
-      <path d="M-5,-70 Q-55,-35 -5,15 Z" fill="#EEF2F6"/>
-      <!-- Flag -->
-      <polygon points="0,-100 35,-85 0,-70" fill="#EF4444"/>
-      <!-- Waves -->
-      <path d="M-130,85 Q-70,65 -10,85 Q50,105 110,85 Q140,75 160,85" stroke="#38BDF8" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <!-- Sun -->
+    <circle cx="95" cy="-80" r="34" fill="url(#sunGrad)" filter="url(#shadow)"/>
+    <!-- Sun smile -->
+    <circle cx="85" cy="-84" r="3.5" fill="#78350F"/>
+    <circle cx="102" cy="-84" r="3.5" fill="#78350F"/>
+    <path d="M88,-74 Q94,-68 100,-74" stroke="#78350F" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+    <!-- Gentle Sky Clouds -->
+    <path d="M-120,-70 Q-100,-95 -75,-75 Q-55,-95 -35,-70 Z" fill="#FFFFFF" opacity="0.9"/>
     
+    <!-- Coastal Hills & Green Palms in Background -->
+    <path d="M-135,30 Q-60,-20 20,35 Q90,-5 135,35 L135,60 L-135,60 Z" fill="#6EE7B7" opacity="0.5"/>
+    
+    <!-- Gentle Waves -->
+    <path d="M-146,55 Q-100,35 -50,55 Q0,75 50,55 Q100,35 146,55 L146,146 A146,146 0 0,1 -146,55 Z" fill="#38BDF8" opacity="0.35"/>
+    <path d="M-146,85 Q-90,65 -30,85 Q30,105 90,85 Q125,70 146,85 L146,146 A146,146 0 0,1 -146,85 Z" fill="#0284C7" opacity="0.5"/>
+
+    <!-- Cheerful Wooden Boat (Perahu Nelayan) -->
+    <g transform="translate(-10, 20)">
+      <!-- Hull -->
+      <path d="M-85,15 Q0,42 85,15 L70,55 Q0,72 -70,55 Z" fill="url(#boatGrad)"/>
+      <path d="M-75,15 L75,15 L62,36 L-62,36 Z" fill="#F59E0B"/>
+      <!-- Mast -->
+      <line x1="12" y1="-85" x2="12" y2="20" stroke="#78350F" stroke-width="6" stroke-linecap="round"/>
+      <!-- Colorful Sail -->
+      <path d="M16,-78 Q75,-40 16,10 Z" fill="#FFFFFF" filter="url(#shadow)"/>
+      <path d="M16,-45 Q60,-25 16,10 Z" fill="#FED7AA"/>
+      <!-- Red Flag on Top -->
+      <polygon points="12,-85 38,-74 12,-63" fill="#EF4444"/>
+
+      <!-- Young Cheerful Malin Character in Boat -->
+      <g transform="translate(-25, -25)">
+        <!-- Body -->
+        <rect x="-14" y="10" width="28" height="28" rx="8" fill="#1687F8"/>
+        <!-- Head -->
+        <circle cx="0" cy="-4" r="17" fill="#FCD34D"/>
+        <!-- Hair -->
+        <path d="M-16,-10 Q0,-24 16,-10 Q14,-22 -14,-22 Z" fill="#1E293B"/>
+        <!-- Eyes & Smile -->
+        <circle cx="-5" cy="-4" r="2.5" fill="#0F172A"/>
+        <circle cx="5" cy="-4" r="2.5" fill="#0F172A"/>
+        <path d="M-4,3 Q0,8 4,3" stroke="#0F172A" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <!-- Rosy Cheeks -->
+        <circle cx="-9" cy="0" r="3" fill="#F87171" opacity="0.6"/>
+        <circle cx="9" cy="0" r="3" fill="#F87171" opacity="0.6"/>
+        <!-- Waving Arm -->
+        <path d="M-14,16 Q-28,2 -26,-10" stroke="#FCD34D" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <circle cx="-26" cy="-10" r="4" fill="#FCD34D"/>
+      </g>
+    </g>
+
+    <!-- Jumping Little Fish -->
+    <path d="M90,75 Q105,60 120,72 Q115,80 102,78 Z" fill="#FB923C"/>
+    <circle cx="96" cy="71" r="1.5" fill="#000"/>
+    <path d="M120,72 L128,66 L126,78 Z" fill="#F97316"/>
+    <!-- Water Splashes -->
+    <circle cx="85" cy="80" r="2.5" fill="#FFFFFF"/>
+    <circle cx="92" cy="65" r="2" fill="#FFFFFF"/>
+    <circle cx="125" cy="85" r="2" fill="#FFFFFF"/>
   </g>
 
   <!-- Title & Subtitle Card -->
-  <g transform="translate(50, 560)">
-    <rect width="500" height="175" rx="28" fill="#FFFFFF" filter="url(#shadow)"/>
+  <g transform="translate(45, 525)">
+    <rect width="510" height="235" rx="30" fill="#FFFFFF" filter="url(#shadow)"/>
     
-    <!-- Title -->
-    <text x="250" y="60" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="30" font-weight="800" fill="#0B2447" text-anchor="middle">
-      Malin Kundang
+    <!-- Title Line 1 -->
+    <text x="255" y="55" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="28" font-weight="900" fill="#0B2447" text-anchor="middle">
+      Malin dan Perjalanan
+    </text>
+    <!-- Title Line 2 -->
+    <text x="255" y="96" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="27" font-weight="900" fill="#1687F8" text-anchor="middle">
+      dari Kampung Laut
     </text>
     
     <!-- Decorative Line -->
-    <path d="M190,78 Q250,88 310,78" stroke="#FFC928" stroke-width="5" stroke-linecap="round" fill="none"/>
+    <path d="M180,118 Q255,130 330,118" stroke="#FFC928" stroke-width="6" stroke-linecap="round" fill="none"/>
 
     <!-- Subtitle -->
-    <text x="250" y="115" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="16" font-weight="600" fill="#64748B" text-anchor="middle">
-      Cerita Rakyat Sumatera Barat
+    <text x="255" y="152" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="14.5" font-weight="700" fill="#475569" text-anchor="middle">
+      Cerita Interaktif Reflektif & Ramah Anak
     </text>
     
-    <text x="250" y="145" font-family="'Caveat', cursive, sans-serif" font-size="20" font-weight="700" fill="#1687F8" text-anchor="middle">
-      Kinder Story Space • Edisi PGPAUD
+    <text x="255" y="180" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="13" font-weight="600" fill="#64748B" text-anchor="middle">
+      Tema: Keluarga • Rasa Syukur • Empati • Literasi PAUD
+    </text>
+
+    <!-- Footer Tag -->
+    <text x="255" y="212" font-family="'Caveat', cursive, sans-serif" font-size="21" font-weight="700" fill="#D97706" text-anchor="middle">
+      Kinder Story Space • Inovasi PGPAUD UPI Cibiru
     </text>
   </g>
 </svg>

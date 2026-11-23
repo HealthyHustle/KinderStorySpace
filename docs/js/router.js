@@ -57,15 +57,20 @@ const Router = (() => {
     }
 
     // 4. Public User Routes
-    if (hash === '#/home' || hash === '') {
+    const [pathOnly, queryStr] = hash.split('?');
+    const params = new URLSearchParams(queryStr || '');
+
+    if (pathOnly === '#/home' || pathOnly === '' || pathOnly === '#/') {
       root.innerHTML = await HomePage.render();
-    } else if (hash.startsWith('#/books/')) {
-      const bookId = hash.replace('#/books/', '');
+    } else if (pathOnly.startsWith('#/books/')) {
+      const bookId = pathOnly.replace('#/books/', '');
       root.innerHTML = await BookDetailPage.render(bookId);
-    } else if (hash.startsWith('#/reader/')) {
-      const bookId = hash.replace('#/reader/', '');
-      root.innerHTML = await ReaderPage.render(bookId);
-    } else if (hash === '#/modules') {
+    } else if (pathOnly.startsWith('#/reader/')) {
+      const bookId = pathOnly.replace('#/reader/', '');
+      const pageParam = parseInt(params.get('page') || params.get('slide'), 10);
+      const targetPage = (!isNaN(pageParam) && pageParam > 0) ? pageParam : 1;
+      root.innerHTML = await ReaderPage.render(bookId, targetPage);
+    } else if (pathOnly === '#/modules') {
       root.innerHTML = await ModulesPage.render();
     } else {
       window.location.hash = '#/home';

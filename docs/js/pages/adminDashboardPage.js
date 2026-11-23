@@ -16,7 +16,7 @@ const AdminDashboardPage = (() => {
         API.getModules()
       ]);
       stats = statsData || stats;
-      modulesList = modulesData.modules || [];
+      modulesList = Array.isArray(modulesData) ? modulesData : (modulesData && modulesData.modules ? modulesData.modules : []);
     } catch (err) {
       console.error('Failed to load admin dashboard data:', err);
     }

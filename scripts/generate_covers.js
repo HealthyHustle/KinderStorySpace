@@ -81,9 +81,9 @@ function createSvgCover({ title, subtitle, bgGradient, iconSvg, accentColor, bad
 const stories = [
   {
     filename: 'malin_kundang.svg',
-    title: 'Malin Kundang',
-    subtitle: 'Cerita Rakyat Sumatera Barat',
-    badge: 'CERITA RAKYAT',
+    title: 'Malin dan Perjalanan dari Kampung Laut',
+    subtitle: 'Kisah Kasih Sayang & Nilai Keluarga',
+    badge: 'CERITA INTERAKTIF',
     bgGradient: ['#1687F8', '#0B4D9C'],
     accentColor: '#1687F8',
     iconSvg: `

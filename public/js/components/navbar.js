@@ -46,6 +46,7 @@ const Navbar = (() => {
           <!-- Menu Links -->
           <ul class="nav-menu" id="nav-menu">
             <li><a href="#/home" class="nav-link ${currentHash === '#/home' ? 'active' : ''}">${t.home}</a></li>
+            <li><a href="#/reader/book-malin-kundang?page=1" class="nav-link" style="color: #D97706; font-weight: 800; display: inline-flex; align-items: center; gap: 6px;" title="Baca Slide Cerita Malin Interaktif"><i class="fas fa-sparkles"></i> <span>Cerita Malin</span></a></li>
             <li><a href="#/home#section-books" class="nav-link ${currentHash.includes('books') ? 'active' : ''}">${t.books}</a></li>
             <li><a href="#/modules" class="nav-link ${currentHash === '#/modules' ? 'active' : ''}">${t.modules}</a></li>
             <li><a href="#/home#section-benefits" class="nav-link">${t.about}</a></li>

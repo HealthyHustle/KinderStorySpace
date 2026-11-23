@@ -392,3 +392,31 @@
     padding: 12px 16px;
   }
 }
+
+/* Custom Scrollbar for Storybook Text Side */
+.storybook-text-side::-webkit-scrollbar {
+  width: 6px;
+}
+.storybook-text-side::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+.storybook-text-side::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.04); opacity: 0.88; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Responsive Featured Story Banner on Home Page */
+@media (max-width: 860px) {
+  .featured-story-banner {
+    grid-template-columns: 1fr !important;
+    padding: 24px 20px !important;
+    gap: 24px !important;
+    text-align: center;
+  }
+}
